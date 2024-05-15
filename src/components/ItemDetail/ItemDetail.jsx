@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Card, CardBody, CardFooter, Stack, Heading, Text, Divider, ButtonGroup, Button, Image, Grid, Flex, Box, Link as ChakraLink } from "@chakra-ui/react";
+import { Card, Heading, Text, Divider, Image, Flex, Box, Link as ChakraLink } from "@chakra-ui/react";
 import ItemCount from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
@@ -23,7 +23,7 @@ const ItemDetail = ({nombre, precio, stock, id, img, descripcion, categoria, cur
             position: "top-center"
         })
     }
-
+    //a
     const maxAvailable = stock - currentQuantity; 
 
   return (

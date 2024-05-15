@@ -23,7 +23,8 @@ Para correr este proyecto localmente, sigue estos pasos:
 2. Navega al directorio del proyecto:
     ```bash
     cd sokis-ecommerce
-3.  ```bash
+3. Instala las dependencia
+   ```bash      
     npm install
 4. Crea un archivo .env en la raíz del proyecto con tus variables de entorno:
     ```bash

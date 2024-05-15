@@ -58,6 +58,6 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para obten
 
 Para cualquier consulta o sugerencia, por favor contacta a través de:
 
-Email: tuemail@example.com
-LinkedIn: tuperfil
-GitHub: tuusuario
+Email: jonhathansojo1@gmail.com
+LinkedIn: [linkedin](https://www.linkedin.com/in/sojoki/)
+GitHub: [github](https://github.com/sojoko)

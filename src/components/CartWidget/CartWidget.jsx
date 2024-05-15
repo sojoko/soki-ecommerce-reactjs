@@ -1,4 +1,4 @@
-import { Box, Badge, Flex } from '@chakra-ui/react';
+import { Badge, Flex } from '@chakra-ui/react';
 import React, { useContext } from 'react'
 import { FaCartShopping } from "react-icons/fa6";
 import Context from '../../context/CartContext';

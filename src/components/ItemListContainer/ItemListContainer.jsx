@@ -1,11 +1,10 @@
 import { Box, Flex, Heading } from "@chakra-ui/react";
-import React, { useContext, useEffect, useState } from "react";
-import { getProducts, getProductsByCategory } from "../../data/mock";
+import React, { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { CircleLoader } from "react-spinners";
 import { db } from "../../data/firebase";
-import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 const ItemListContainer = ({title}) => {
   const [ products, setProducts ] = useState([])
@@ -30,7 +29,6 @@ const ItemListContainer = ({title}) => {
 
     }
     getData()
-    console.log("se ejecuta")
   }, [categoryId])
 
   return (

@@ -76,8 +76,7 @@ const Checkout = () => {
     const getOrder = async () => {
     const isFormValid = validateForm()
          if(isFormValid){
-          const ordersCollection = collection(db, 'orders')  
-          console.log(ordersCollection)
+          const ordersCollection = collection(db, 'orders')          
             try {
                 for(const item of cart) {
                     const productRef = doc(db, 'productos', item.id)
@@ -89,28 +88,26 @@ const Checkout = () => {
                         await updateDoc(productRef, {
                             stock: currentStock - item.quantity
                         })
-                    }else {
-                        // mostrarle al usuario el error que no tiene suficiente stock
+                    }else {     
                         console.log(`No hay suficiente stock para ${item.name}`)
                     }
                     const order = {
                         buyer: user,
                         cart: cart,
-                        total: getTotal(),
-                        // fecha de la compra
+                        total: getTotal(),                
                         fechaDeCompra: Timestamp.now() 
                     }
                     
                     const orderDocRef = await addDoc(ordersCollection, order)
-                    Swal.fire({
-                        title: 'Gracias por tu compra',
-                        text: `El número de orden es: ${orderDocRef.id}`,
-                        icon: 'success',
-                        confirmButtonText: 'Cool'
-                      }).then(()=> {
-                        clearCart()
-                        navigate('/')
-                      })
+                    // Swal.fire({
+                    //     title: 'Gracias por tu compra',
+                    //     text: `El número de orden es: ${orderDocRef.id}`,
+                    //     icon: 'success',
+                    //     confirmButtonText: 'Cool'
+                    //   }).then(()=> {
+                    //     clearCart()
+                    //     navigate('/')
+                    //   })
                 }
             } catch (error) {
                 console.log(error)

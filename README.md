@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Sokis Ecommerce 🛒
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Sokis Ecommerce es un proyecto de software realizado como práctica durante mi periodo de estudio. Este proyecto tiene como objetivo proporcionar una plataforma de comercio electrónico funcional y moderna, utilizando tecnologías actuales y buenas prácticas de desarrollo.
 
-## Available Scripts
+## Aspectos Importantes 🔍
 
-In the project directory, you can run:
+### Chakra UI para Componentes 🧩
+Se utiliza la librería [Chakra UI](https://chakra-ui.com/) para los componentes, lo que permite una construcción rápida y fácil de una interfaz de usuario moderna y accesible. Chakra UI proporciona un conjunto de componentes estilizados y flexibles que se pueden personalizar según las necesidades del proyecto.
 
-### `npm start`
+### Tailwind CSS para Estilos 🌈
+Se usa [Tailwind CSS](https://tailwindcss.com/) para complementar los estilos en ciertos componentes. Tailwind CSS es una utilidad de CSS de primera clase que permite aplicar estilos directamente en el HTML, facilitando la creación de diseños complejos sin salir del archivo de componente.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Firestore como Base de Datos 🔥
+Se usa [Firestore](https://firebase.google.com/products/firestore) como base de datos para almacenar y sincronizar datos en tiempo real. Firestore es una base de datos NoSQL que facilita el desarrollo de aplicaciones web y móviles escalables y de alto rendimiento.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Instalación 🚀
 
-### `npm test`
+Para correr este proyecto localmente, sigue estos pasos:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tuusuario/sokis-ecommerce.git
+2. Navega al directorio del proyecto:
+    ```bash
+    cd sokis-ecommerce
+3.  ```bash
+    npm install
+4. Crea un archivo .env en la raíz del proyecto con tus variables de entorno:
+    ```bash
+    REACT_APP_FIREBASE_API_KEY=your_api_key
+    REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+    REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+    REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+    REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+    REACT_APP_FIREBASE_APP_ID=your_app_id
+5. Inicia el servidor de desarrollo:
+    npm start
 
-### `npm run build`
+## Uso 📦
+Una vez que el servidor de desarrollo esté corriendo, puedes acceder a la aplicación en http://localhost:3000.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contribuciones 🤝
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Las contribuciones son bienvenidas. Si deseas contribuir, por favor sigue estos pasos:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Haz un fork del proyecto.
+Crea una nueva rama (git checkout -b feature/nueva-funcionalidad).
+Realiza tus cambios y haz commit (git commit -m 'Agregar nueva funcionalidad').
+Haz push a la rama (git push origin feature/nueva-funcionalidad).
+Abre un Pull Request.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Licencia 📄
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para obtener más detalles.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contacto ✉️
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Para cualquier consulta o sugerencia, por favor contacta a través de:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Email: tuemail@example.com
+LinkedIn: tuperfil
+GitHub: tuusuario

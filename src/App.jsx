@@ -1,29 +1,33 @@
-
-import { FaRobot } from 'react-icons/fa';
-import './App.css';
-import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
-import { NavBar } from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import NavBar from './components/NavBar/NavBar'
 import { ChakraProvider } from '@chakra-ui/react'
-import { Box } from '@chakra-ui/react'
-
+import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import PageNotFound from './components/pageNotFound/404'
+import Cart from './components/Cart/Cart'
+import { ContextProvider } from './context/CartContext'
+import Checkout from './components/Checkout/Checkout'
 
 function App() {
+
   return (
-    <div>  
-   
-    <ChakraProvider >
-      <Box fontFamily={'roboto'}>
-        <Box  display='flex' alignItems='center' justifyContent='flex-end' padding={3}  bg ='violet' fontSize={24}>    
+    <ChakraProvider>
+      <ContextProvider>
+        <BrowserRouter>
           <NavBar/>
-        </Box>     
-        <Box fontSize={40} display={'flex'} alignItems={'center'} justifyContent={'center'}>
-          <ItemListContainer title='Tienda'/>    
-        </Box>
-      </Box>      
-    </ChakraProvider>    
-  
-    </div>
-  );
+          <Routes>
+            <Route path='/' element={<ItemListContainer title='Tienda' texto='prop desde App'/>}/>
+            <Route path='/categoria/:categoryId' element={<ItemListContainer title='Tienda' />}/>
+            <Route path='/producto/:productId' element={<ItemDetailContainer />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/checkout' element={<Checkout/>} />
+            <Route path='*' element={<PageNotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </ContextProvider>
+    </ChakraProvider>
+  )
 }
 
-export default App;
+export default App

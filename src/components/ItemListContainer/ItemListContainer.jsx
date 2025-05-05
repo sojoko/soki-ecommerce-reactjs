@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { CircleLoader } from "react-spinners";
-import { db } from "../../data/firebase";
-import { collection, getDocs, query, where } from "firebase/firestore";
+import { getProducts, getProductsByCategory } from "../../data/mock";
 
 const ItemListContainer = ({title}) => {
   const [ products, setProducts ] = useState([])
@@ -14,19 +13,16 @@ const ItemListContainer = ({title}) => {
   useEffect(() => {
     setLoading(true)
     const getData = async () => {
-      const coleccion = collection(db, 'products')
-      const qr = !categoryId ? coleccion 
-      :
-      query(coleccion, where('categoria', '==', categoryId))
-      const response = await getDocs(qr)
+      let response;
 
-      const products = response.docs.map(doc => {
-        const newProduct = { id: doc.id, ...doc.data() }        
-        return newProduct
-      })
-      setProducts(products)
+      if (!categoryId) {
+        response = await getProducts();
+      } else {
+        response = await getProductsByCategory(categoryId);
+      }
+
+      setProducts(response)
       setLoading(false)
-
     }
     getData()
   }, [categoryId])

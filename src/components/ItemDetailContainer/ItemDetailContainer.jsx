@@ -4,8 +4,7 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 import { Box, Flex } from '@chakra-ui/react'
 import { CircleLoader } from 'react-spinners'
 import Context from '../../context/CartContext'
-import { doc, getDoc } from 'firebase/firestore'
-import { db } from '../../data/firebase'
+import { getProductById } from '../../data/mock'
 
 
 const ItemDetailContainer = () => {
@@ -16,16 +15,13 @@ const ItemDetailContainer = () => {
 
     const navigate = useNavigate()
     useEffect(() => {
-        const getProductById = async() => {
-            const qr = doc(db, 'products', productId)
-            const response = await getDoc(qr)
-            const newItem = { id: response.id, ...response.data() }
-            setProducto(newItem)
-            console.log(newItem)
+        const fetchProduct = async() => {
+            const product = await getProductById(productId)
+            setProducto(product)
+            console.log(product)
             setLoading(false)
-
         }
-        getProductById()
+        fetchProduct()
     }, [productId])
 
   return (
